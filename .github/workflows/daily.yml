@@ -2,7 +2,7 @@ name: daily-iptv-regenerate
 
 on:
   schedule:
-    - cron: '0 12 * * *' # runs every midnight
+    - cron: '0 * * * *' # runs at the beginning of every hour
 
 # on:
 #   push:
