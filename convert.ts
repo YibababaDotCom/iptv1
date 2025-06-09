@@ -89,7 +89,7 @@ async function filterAndTransform(lines: string[], whiteList: Array<ChannelInfo>
         // console.log(targetC)
         let wl = whiteList.filter(x => targetC.includes(x.channel))[0]
         if(wl) {
-            m3u += `#EXTINF:-1 tvg-id="${c.channel}" tvg-country="UK" tvg-language="English" ${c.attrs.filter(x => x.includes("tvg-logo"))[0]}" group-title="${wl.group}", ${wl.niceName}\n`
+            m3u += `#EXTINF:-1 tvg-id="${c.channel}" ${c.attrs.filter(x => x.includes("tvg-logo"))[0]}" group-title="${wl.group}", ${wl.niceName}\n`
             if(c.opt != "") {
                 m3u += c.opt + "\n"
             }
